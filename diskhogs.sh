@@ -3,6 +3,8 @@
 # accounts are >= UID 100. Emails a message to each violating user
 # and reports a summary to the screen.
 MAXDISKUSAGE=3000
+#In Bytes (3GB or 3000MB)
+
 violators="/tmp/diskhogs0.$$"
 trap "$(which rm) -f $violators" 0
 for name in $(cut -d: -f1,3 /etc/passwd | awk -F: '$2 > 99 { print $1 }')
