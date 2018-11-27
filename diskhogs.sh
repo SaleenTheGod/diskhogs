@@ -3,7 +3,7 @@
 # accounts are >= UID 100. Emails a message to each violating user
 # and reports a summary to the screen.
 MAXDISKUSAGE=3000
-#In Bytes (3GB or 3000MB)
+#In Megabytes (3GB or 3000MB)
 
 violators="/tmp/diskhogs0.$$"
 trap "$(which rm) -f $violators" 0
